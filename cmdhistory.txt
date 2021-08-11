@@ -1,0 +1,31 @@
+cd C:\Users\v-istahi\Documents\Training\OSS_focused\AzureFunctions\netcontainer
+func init LocalFunctionsProject --worker-runtime dotnet --docker
+func new --name HttpExample --template "HTTP trigger"
+func start 
+
+doskey /history  >> cmdhistory.txt
+docker build --tag istahiacr.azurecr.io/azurefunctionsimage:v1.0.0 .
+docker build --no-cache --tag istahiacr.azurecr.io/azurefunctionsimage:retryenbld .
+
+docker push istahiacr.azurecr.io/azurefunctionsimage:v1.0.0
+docker push istahiacr.azurecr.io/azurefunctionsimage:nothrow
+
+
+
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=bash%2Cportal&pivots=programming-language-csharp
+
+MyHttpTrigger: [GET,POST] http://localhost:7071/api/MyHttpTrigger?name=
+throwsexeption: [GET,POST] http://localhost:7071/api/throwsexeption?name=
+
+https://istahiretrydockerfunc.azurewebsites.net/api/throwsexeption?name=0
+
+
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cportal%2Cbash%2Ckeda#prerequisites
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=bash%2Cportal&pivots=programming-language-csharp
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-error-pages?tabs=csharp#retry-policies-preview
+
+
+C:\Users\v-istahi\Documents\Training\OSS_focused\AzureFunctions\netcontainer\LocalFunctionsProject\MyHttpTrigger.cs(16,10): error CS0246: The type or namespace name 'FixedDelayRetryAttribute' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\v-istahi\Documents\Training\OSS_focused\AzureFunctions\netcontainer\LocalFunctionsProject\LocalFunctionsProject.csproj]
+C:\Users\v-istahi\Documents\Training\OSS_focused\AzureFunctions\netcontainer\LocalFunctionsProject\MyHttpTrigger.cs(16,10): error CS0246: The type or namespace name 'FixedDelayRetry' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\v-istahi\Documents\Training\OSS_focused\AzureFunctions\netcontainer\LocalFunctionsProject\LocalFunctionsProject.csproj]
+    2 Warning(s)
+    2 Error(s)
