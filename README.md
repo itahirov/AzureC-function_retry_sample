@@ -14,3 +14,5 @@ After hooking up the uploaded image from ACR by the application you will be able
 
 https://istahiretrydockerfunc.azurewebsites.net/api/throwsexeption?name=0 will cause error and retry  </br>  
 https://istahiretrydockerfunc.azurewebsites.net/api/throwsexeption?name=10 will execute succesfull </br>
+
+Documentation used - https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=bash%2Cportal&pivots=programming-language-csharp
