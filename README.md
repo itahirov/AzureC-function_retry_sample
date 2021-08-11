@@ -8,6 +8,9 @@ docker push <acrname>.azurecr.io/azurefunctionsimage:v1.0.0 </br></br>
 
 By downloading below library you will be able to use  retry hint with the function [FixedDelayRetry(5, "00:00:05")] </br>
 
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-error-pages?tabs=csharp#fixed-delay-retry
+![name-of-you-image](https://github.com/itahirov/AzureC-function_retry_sample/blob/main/func_retry.jpg)
+
 dotnet add package Microsoft.Azure.WebJobs --version 3.0.27  </br>
 
 After hooking up the uploaded image from ACR by the application you will be able to reach it by following links </br></br>
